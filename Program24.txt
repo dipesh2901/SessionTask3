@@ -1,0 +1,7 @@
+select *,(sal*1.7) as increment_sal from emp where mgr is not null order by (sal*1.7) desc;
+ 
+select empno, ename from emp where sal between 2000 and 3000 order by empno asc;
+ 
+select distinct empno,job from emp where deptno in(10,20);
+
+select distinct job from emp where job!="manager";
