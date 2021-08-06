@@ -18,7 +18,7 @@ public class POC_bank_version1 {
 			Map<String, String> accountList = new HashMap<String, String>();
 			Map<String, String> userInfoList = new HashMap<String, String>();
 			Iterator iterator;
-			String regex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$";
+			String regex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()â€“[{}]:;',?/*~$^+=<>]).{8,20}$";
 			String regex_mobile = "[+]{1}[0-9]{2}[-]{1}\\d{10}";
 			boolean condition = false, condition2 = false, doesUsernameExist = false, updateUser = false;
 			int choice, choice2;
@@ -59,7 +59,7 @@ public class POC_bank_version1 {
 									condition = true;
 								} else {
 									System.out.println(
-											"PLEASE ENTER 10 DIGIT NUMBER WITH COUNTRY CODE- EXAMPLE: +91********** ");
+											"PLEASE ENTER 10 DIGIT NUMBER WITH COUNTRY CODE- EXAMPLE: +91-********** ");
 								}
 							}
 						}
