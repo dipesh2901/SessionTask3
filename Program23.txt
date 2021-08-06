@@ -1,0 +1,5 @@
+select * ,(0.95*sal) as Decr_sal from emp where job='clerk';
+select empno,ename from emp where sal between 2000 and 3000;
+select empno,job from emp where deptno in (10,20);
+select empno,mgr from emp where sal>2000 or deptno>10 or job='clerk';
+select*,(1.2*sal) as incre_sal from emp where mgr is null;
