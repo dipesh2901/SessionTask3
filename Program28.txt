@@ -1,0 +1,6 @@
+select * from emp where datediff(curdate(),hiredate)=(select max(datediff(curdate(),hiredate)) from emp);
+select empno,hiredate,(1.1*sal) as incre_sal from emp where year(curDate())-year(hiredate)>=3;
+select empno,hiredate,(1.17*sal) as incre_sal from emp where year(curdate())-year(hiredate)>=5 and sal<2000;
+select hiredate,count(empno) as joining from emp group by month(hiredate);
+select hiredate,count(empno) as joining from emp group by year(hiredate);
+create table new_emp select * from emp where year(hiredate)>=year('2021-01-01');
