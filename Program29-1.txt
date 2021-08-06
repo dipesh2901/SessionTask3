@@ -1,0 +1,21 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `EmpExperience`(
+in empid decimal(4,0),
+out  level varchar(20)
+)
+begin
+declare yearEmp int;
+select year(curdate())-year(hiredate) into yearEmp from emp where empno=empid;
+if yearEmp>2 and yearEmp<4 then
+set level='Medium';
+elseif yearEmp>4 then
+set level='Senior';
+else 
+set level='Junior';
+end if;
+end
+
+-- call
+
+set @level = '0';
+call mydb.EmpExperience(100, @level);
+select @level;
