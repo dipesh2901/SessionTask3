@@ -1,0 +1,8 @@
+select count(empno) as emp_total from emp;
+select deptno,count(empno) as emp_total from emp group by deptno;
+select min(sal) as min_sal from emp;
+select deptno,max(sal) as max_sal from emp group by deptno;
+select count(empno) as total_emp from emp where sal>2000;
+select deptno,count(empno) as total_emp from emp where sal<3000 group by deptno;
+select deptno from emp group by deptno having count(empno)<3;
+select deptno from emp group by deptno having max(sal)>3000;
