@@ -1,0 +1,10 @@
+CREATE DEFINER=`root`@`localhost` FUNCTION `sallIncre`(
+sal int,
+percentage float) RETURNS double
+    DETERMINISTIC
+begin
+return sal+(percentage/100)*sal;
+end
+
+-- call
+select mydb.sallIncre(2000, 2);
